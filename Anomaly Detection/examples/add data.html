@@ -18,6 +18,7 @@
   <link href="../assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/upload.css"/>
 </head>
 
 <body class="">
@@ -143,57 +144,30 @@
       </div>
       <!-- End Navbar -->
       <div class="content">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
-              <div class="card-body all-icons">
-                <div class="row">
-                  <div class="layoutBodyColumns layoutRow addDataBody"><div class="data-source-columns flexRow adddata-datasource file-upload" data-cid="view8861" data-view="views/add_data/DataSource" data-render-time="0.002">
-                    <div class="data-source-upload" style="display: block;"><div data-cid="view8908" class="adddata-inputforms-fileupload" data-view="views/add_data/input_forms/FileUpload" data-render-time="0.001"><div class="fileUpload">
-                        <h1 class="title"> Select Source </h1>
-                        <p>Choose a file to upload to the Splunk platform, either by browsing your computer or by dropping a file into the target box below.
-                        <a class="external" href="/en-US/help?location=learnmore.adddata.upload" target="_blank"> Learn More</a>
-                        </p>
+                    <h3>Select Source</h3>
+                    <p1 class="lead">Choose a file to upload to the app</p1>
                     
-                        <div class="browserWarning" style="display: none;padding-top:40px;padding-bottom:40px;">
-                            <div class="alert alert-error">
-                                <i class="icon-alert"></i>Your browser does not support file uploads. Please download and install the latest version or use another supported browser to access this feature. <a class="external" href="/en-US/help?location=learnmore.adddata.browser" target="_blank"> Learn More</a>
-                            </div>
+                    <!-- Upload  -->
+                    <form id="file-upload-form" class="uploader">
+                      <input id="file-upload" type="file" name="fileUpload"/>
+                    
+                      <label for="file-upload" id="file-drag">
+                        <img id="file-image" src="#" alt="Preview" class="hidden">
+                        <div id="start">
+                          <i class="fa fa-download" aria-hidden="true"></i>
+                          <div>Select a file or drag here</div>
+                          <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
                         </div>
-                    
-                        <div class="uploadControlWrapper">
-                            <div id="flashmessages-placeholder"><div class="alerts shared-flashmessages" data-cid="view8910" data-view="views/shared/FlashMessages" data-render-time="0" style="display: none;">                             </div><div class="alerts shared-flashmessageslegacy" data-cid="view8918" data-view="views/shared/FlashMessagesLegacy" data-render-time="0" style="display: none;">                     </div></div>
-                            <div class="selected-file clearfix">
-                                <label class="control-label" style="display: inline-block;">Selected File:</label>
-                                <span class="source-label">No file selected</span>
-                            </div>
-                    
-                    
-                            <a href="#" class="btn upload-file-button">Select File</a>
-                            <input type="file" id="inputReference" name="spl-file" style="display:none;">
-                            <div class="dropzone-container"><div class="dropzone dropzone-large">
-                        <div class="dropzone-box"></div>
-                        <div class="dropzone-text"><h2> Drop your data file here </h2></div>
-                    </div>
-                    </div>
-                    
-                            <span class="max-filesize">The maximum file upload size is 500 Mb</span>
-                            <div class="progress" style="display: none;">
-                              <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                                <span class="sr-only"></span>
-                              </div>
-                            </div>
+                        <div id="response" class="hidden">
+                          <div id="messages"></div>
+                          <progress class="progress" id="file-progress" value="0">
+                            <span>0</span>%
+                          </progress>
                         </div>
-                    </div>
-                    <div class="faq shared-faq" data-cid="view8909" data-view="views/shared/Faq" data-render-time="0.001"><h2>FAQ</h2><div class="faq-group">                    <div class="faq-header" tabindex="0">                        <i class="icon-accordion-toggle icon-chevron-right"></i><span class="faq-question">What kinds of files can the Splunk platform index?</span>                    </div>                    <div class="faq-body">                        Many kinds. The Splunk platform recognizes many different file formats, and you can configure it to recognize many more.                    </div>                </div><div class="faq-group">                    <div class="faq-header" tabindex="0">                        <i class="icon-accordion-toggle icon-chevron-right"></i><span class="faq-question">What is a source?</span>                    </div>                    <div class="faq-body">                        A source is a file, a network stream, or a specialized output such as a Windows Event Log channel. The Splunk platform uses the "source" field of an indexed event to identify the event's original location or method of input.                    </div>                </div><div class="faq-group">                    <div class="faq-header" tabindex="0">                        <i class="icon-accordion-toggle icon-chevron-right"></i><span class="faq-question">How do I get remote data onto my Splunk platform instance?</span>                    </div>                    <div class="faq-body">                        If the data is on a machine on the same network, you can map or mount a drive to access the data. The most popular option is to forward the data by installing a universal forwarder on the machine that contains the data.                    </div>                </div></div></div></div>
-                    
-                    </div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                      </label>
+                    </form>
+                    <!-- partial -->
+                      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="../assets/js/upload.js"></script>
       </div>
       <footer class="footer">
         <div class="container-fluid">
@@ -270,6 +244,7 @@
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="../assets/js/upload.js"></script>
   <!--  Google Maps Plugin    -->
   <!-- Place this tag in your head or just before your close body tag. -->
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
