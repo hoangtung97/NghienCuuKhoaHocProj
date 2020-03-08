@@ -211,6 +211,7 @@ demo = {
             // suggestedMin: 50,
             // suggestedMax: 110,
             padding: 20,
+            source: 'auto', 
             fontColor: "#ff8a76"
           }
         }],

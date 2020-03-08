@@ -9,23 +9,17 @@
   <title>
    ANOMALY DETECTION
   </title>
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
-  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <!-- Nucleo Icons -->
-  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link href="../assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <!-- DEMO -->
+    <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="">
   <div class="wrapper">
     <div class="sidebar">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
-    -->
       <div class="sidebar-wrapper">
         <div class="logo">
           <a href="javascript:void(0)" class="simple-text logo-mini">
@@ -63,8 +57,8 @@
         </ul>
       </div>
     </div>
+
     <div class="main-panel">
-      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
         <div class="container-fluid">
           <div class="navbar-wrapper">
@@ -132,7 +126,8 @@
           </div>
         </div>
       </div>
-      <!-- End Navbar -->
+
+
       <div class="content">
         <div class="row">
           <div class="col-12">
@@ -169,11 +164,10 @@
               </div>
             </div>
           </div>
-           <!-- <div class="col-lg-4">
+            <div class="col-lg-4">
             <div class="card card-chart">
               <div class="card-header">
-                <h5 class="card-category"> Task 2</h5>
-                <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info"></i> 3,500</h3>
+                <h5 class="card-category"> Time Series</h5>
               </div>
               <div class="card-body">
                 <div class="chart-area">
@@ -182,7 +176,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <!--<div class="col-lg-4">
             <div class="card card-chart">
               <div class="card-header">
                 <h5 class="card-category">Task 3</h5>
@@ -223,20 +217,23 @@
       </ul>
     </div>
   </div>
-  <!--   Core JS Files   -->
+
+
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!--  Google Maps Plugin    -->
-  <!-- Place this tag in your head or just before your close body tag. -->
+
+  
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-  <!-- Chart JS -->
+
+
   <script src="../assets/js/plugins/chartjs.min.js"></script>
-  <!--  Notifications Plugin    -->
+
+  
   <script src="../assets/js/plugins/bootstrap-notify.js"></script>
-  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
+  
+  <script src="../assets/js/black-dashboard.min.js?v=1.0.0"></script>
   <script src="../assets/demo/demo.js"></script>
   <script>
     $(document).ready(function() {
@@ -303,12 +300,12 @@
             blackDashboard.showSidebarMessage('Sidebar mini activated...');
           }
 
-          // we simulate the window Resize so the charts will get updated in realtime.
+      
           var simulateWindowResize = setInterval(function() {
             window.dispatchEvent(new Event('resize'));
           }, 180);
 
-          // we stop the simulation of Window Resize after the animations are completed
+        
           setTimeout(function() {
             clearInterval(simulateWindowResize);
           }, 1000);
@@ -351,7 +348,7 @@
   </script>
   <script>
     $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
+  
       demo.initDashboardPageCharts();
 
     });
