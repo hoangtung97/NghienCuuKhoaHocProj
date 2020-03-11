@@ -668,6 +668,7 @@ pre code {
 .col-10,
 .col-11,
 .col-12,
+.col-13,
 .col,
 .col-auto,
 .col-sm-1,
@@ -801,8 +802,12 @@ pre code {
 
 .col-12 {
   flex: 0 0 100%;
-  max-width: 100%;
+  max-width: 50%;
 }
+.col-13 {
+  flex: 0 0 100%;
+  max-width: 50%;
+} 
 
 .order-first {
   order: -1;
@@ -5195,7 +5200,7 @@ input[type="button"].btn-block {
 }
 
 .card-title {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0rem;
 }
 
 .card-subtitle {

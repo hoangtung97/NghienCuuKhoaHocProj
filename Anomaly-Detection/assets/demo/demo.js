@@ -329,6 +329,7 @@ demo = {
     // };
 
     var ctx = document.getElementById("chartLinePurple").getContext("2d");
+    
 
     var data = {
      
@@ -347,7 +348,7 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [{x: 0.5,y: 0.9}, {x: 0.1,y: 0.6}, { x: 0.5,y: 0.1}, { x: 0.4,y: 0.7}, { x: 0.6,y: 0.3}, { x: 0.1,y: 0.8}, { x: 0.4,y: 1}, { x: 1,y: 0.3}]
+        data: [{x: 1,y: 2}, {x: 1,y: 2}, { x: 0.5,y: 0.1}, { x: 0.4,y: 0.7}, { x: 0.6,y: 0.3}, { x: 0.1,y: 0.8}, { x: 0.4,y: 1}, { x: 1,y: 0.3}]
       }]
     };
   

@@ -37,9 +37,9 @@
         </div>
         <ul class="nav">
           <li>
-            <a href="./overview.html">
+            <a href="./visualization.html">
               <i class="tim-icons icon-chart-pie-36"></i>
-              <p>Overview</p>
+              <p>Visualization</p>
             </a>
           </li>
           <li class="active ">
@@ -50,9 +50,9 @@
           </li>
           
           <li>
-            <a href="./notifications.html">
+            <a href="./anomalydetection.html">
               <i class="tim-icons icon-bell-55"></i>
-              <p>Notifications</p>
+              <p>Anomaly Detection</p>
             </a>
           </li>
           <li>
@@ -136,13 +136,13 @@
       <!-- End Navbar -->
       <div class="content">
         <div class="row">
-          <div class="col-12">
+          <div class="col-13">
             <div class="card card-chart">
               <div class="card-header ">
                 <div class="row">
                   <div class="col-sm-6 text-left">
                     <h5 class="card-category">Choose file to upload </h5>
-                    <h2 class="card-title">SELECT SOURCE</h2>
+                    <h2 class="card-title">NORMAL DATA</h2>
                   </div>
                 </div>
               </div>
@@ -154,11 +154,36 @@
                   <input type="file" id="file" style="display: none;" name="FileUpload"/>
                 </div>
                 <!--File upload-->
+                <div class="col-sm-6 text-left">
+                  <h6 class="card-title">PREVIEW:</h6>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 text-left">
-            <h6 class="card-title">PREVIEW:</h6>
+
+          <div class="col-13">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <div class="row">
+                  <div class="col-sm-6 text-left">
+                    <h5 class="card-category">Choose file to upload </h5>
+                    <h2 class="card-title">MIXED DATA</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart-area-adddata"></div>
+                <!--File upload-->
+                <div class="card-footer">
+                  <button class="btn btn-fill btn-primary" id="button" name="button" value="Upload" onclick="thisFileUpload();">ADD...</button>
+                  <input type="file" id="file" style="display: none;" name="FileUpload"/>
+                </div>
+                <!--File upload-->
+                <div class="col-sm-6 text-left">
+                  <h6 class="card-title">PREVIEW:</h6>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
