@@ -802,7 +802,7 @@ pre code {
 
 .col-12 {
   flex: 0 0 100%;
-  max-width: 50%;
+  max-width: 100%;
 }
 .col-13 {
   flex: 0 0 100%;
@@ -19798,7 +19798,7 @@ Copyright (c) 2015 Daniel Eden
 
 .white-content .card:not(.card-white) {
   background: #ffffff;
-  box-shadow: 0 1px 15px 0 rgba(, , , 0.05);
+  box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.05);
 }
 
 .white-content .card:not(.card-white) .card-header {
@@ -20252,7 +20252,11 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-chart .chart-area {
-  height: 220px;
+  height: 300px;
+  width: 100%;
+}
+.card-chart .chart-area1 {
+  height: 500px;
   width: 100%;
 }
 .chart-area-adddata {
