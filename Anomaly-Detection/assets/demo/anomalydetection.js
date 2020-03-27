@@ -45,9 +45,9 @@ series.strokeWidth = 3;
 series.tooltipText = "{valueY.value}";
 series.fillOpacity = 0.1;
 
-// Create a range to change stroke for values below 0
+// tao duong ranh gioi
 var range = valueAxis.createSeriesRange(series);
-range.value = 60;
+range.value = 80;
 range.endValue = -1000;
 range.contents.stroke = chart.colors.getIndex(5);
 range.contents.fill = range.contents.stroke;
