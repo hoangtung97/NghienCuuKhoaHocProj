@@ -9,14 +9,10 @@
   <title>
   ANOMALY DETECTION
   </title>
-  <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <!-- Nucleo Icons -->
   <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <!-- CSS Files -->
   <link href="../assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
@@ -31,7 +27,7 @@
           <a href="javascript:void(0)" class="simple-text logo-mini">
             MTA
           </a>
-          <a href="/examples/overview.html" class="simple-text logo-normal">
+          <a href="./index.html" class="simple-text logo-normal">
             ANOMALY DETECTION
           </a>
         </div>
@@ -141,8 +137,7 @@
               <div class="card-header ">
                 <div class="row">
                   <div class="col-sm-6 text-left">
-                    <h5 class="card-category">Choose file to upload </h5>
-                    <h2 class="card-title">NORMAL DATA</h2>
+                    <h2 class="card-title">ANOMALY DETECTION</h2>
                   </div>
                 </div>
               </div>
@@ -150,12 +145,8 @@
                 <div class="chart-area-adddata"></div>
                 <!--File upload-->
                 <div class="card-footer">
-                  <button class="btn btn-fill btn-primary" id="button" name="button" value="Upload" onclick="thisFileUpload();">ADD...</button>
+                  <button class="btn btn-fill btn-primary" id="button" name="button" value="Upload" onclick="window.location.href='./input-anomalydetection.html'">ADD DATA</button>
                   <input type="file" id="file" style="display: none;" name="FileUpload"/>
-                </div>
-                <!--File upload-->
-                <div class="col-sm-6 text-left">
-                  <h6 class="card-title">PREVIEW:</h6>
                 </div>
               </div>
             </div>
@@ -166,8 +157,7 @@
               <div class="card-header ">
                 <div class="row">
                   <div class="col-sm-6 text-left">
-                    <h5 class="card-category">Choose file to upload </h5>
-                    <h2 class="card-title">MIXED DATA</h2>
+                    <h2 class="card-title">VISUALIZATION</h2>
                   </div>
                 </div>
               </div>
@@ -175,62 +165,24 @@
                 <div class="chart-area-adddata"></div>
                 <!--File upload-->
                 <div class="card-footer">
-                  <button class="btn btn-fill btn-primary" id="button" name="button" value="Upload" onclick="thisFileUpload();">ADD...</button>
+                  <button class="btn btn-fill btn-primary" id="button" name="button" value="Upload" onclick="window.location.href='./input-visualization.html'">ADD DATA</button>
                   <input type="file" id="file" style="display: none;" name="FileUpload"/>
                 </div>
                 <!--File upload-->
-                <div class="col-sm-6 text-left">
-                  <h6 class="card-title">PREVIEW:</h6>
-                </div>
+             
               </div>
             </div>
           </div>
         </div>
       </div>
-    
-        
-        
-  <div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-      <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
-      </a>
-      <ul class="dropdown-menu">
-        <li class="header-title"> Sidebar Background</li>
-        <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger background-color">
-            <div class="badge-colors text-center">
-              <span class="badge filter badge-primary active" data-color="primary"></span>
-              <span class="badge filter badge-info" data-color="blue"></span>
-              <span class="badge filter badge-success" data-color="green"></span>
-            </div>
-            <div class="clearfix"></div>
-          </a>
-        </li>
-        <li class="adjustments-line text-center color-change">
-          <span class="color-label">LIGHT MODE</span>
-          <span class="badge light-badge mr-2"></span>
-          <span class="badge dark-badge ml-2"></span>
-          <span class="color-label">DARK MODE</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!--  Google Maps Plugin    -->
-  <!-- Place this tag in your head or just before your close body tag. -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-  <!-- Chart JS -->
+  <script src="../assets/js/core/googleapi.js"></script>
   <script src="../assets/js/plugins/chartjs.min.js"></script>
-  <!--  Notifications Plugin    -->
   <script src="../assets/js/plugins/bootstrap-notify.js"></script>
-  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../assets/demo/demo.js"></script>
+  <script src="../assets/js/black-dashboard.min.js?v=1.0.0"></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
