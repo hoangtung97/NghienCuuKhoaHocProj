@@ -30,7 +30,7 @@ function generatechartData() {
 }
 
 // Create axes
-var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+var dateAxis = chart.xAxes.push(new am4charts.DateAxis());  
 dateAxis.startLocation = 0.5;
 dateAxis.endLocation = 0.5;
 
@@ -44,6 +44,15 @@ series.dataFields.dateX = "date";
 series.strokeWidth = 3;
 series.tooltipText = "{valueY.value}";
 series.fillOpacity = 0.1;
+
+// Make bullets grow on hover
+var bullet = series.bullets.push(new am4charts.CircleBullet());
+bullet.circle.strokeWidth = 2;
+bullet.circle.radius = 3;
+bullet.circle.fill = am4core.color("#fff");
+
+var bullethover = bullet.states.create("hover");
+bullethover.properties.scale = 1.3;
 
 // tao duong ranh gioi
 var range = valueAxis.createSeriesRange(series);
