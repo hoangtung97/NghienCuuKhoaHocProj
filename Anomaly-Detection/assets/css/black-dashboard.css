@@ -16728,8 +16728,8 @@ hr {
 .card-tasks .card-body .table>thead>tr>td,
 .card-tasks .card-body .table>tbody>tr>td,
 .card-tasks .card-body .table>tfoot>tr>td {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .table>thead>tr>th {
@@ -19941,7 +19941,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card .card-body {
-  padding: 15px;
+  padding: 1px;
 }
 
 .card .card-body.table-full-width {
@@ -20240,7 +20240,7 @@ Copyright (c) 2015 Daniel Eden
   width: 100%;
 }
 .card-chart .chart-area1 {
-  height: 500px;
+  height: 300px;
   width: 100%;
 }
 .chart-area-adddata {
@@ -20249,7 +20249,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-chart .card-footer {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .card-chart .card-footer .stats {
@@ -20381,7 +20381,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .card-user .card-body {
-  min-height: 240px;
+  min-height: 400px;
 }
 
 .card-user hr {

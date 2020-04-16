@@ -75,3 +75,120 @@ range.contents.fillOpacity = 0.2;
 
 chart.scrollbarX = new am4core.Scrollbar();
 chart.cursor = new am4charts.XYCursor()
+
+
+
+
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+var piechart = am4core.create("chartdiv2", am4charts.PieChart);
+
+// Add data
+piechart.data = [ {
+  "label": "Normal",
+  "rate": 501.9
+}, {
+  "label": "Undetected",
+  "rate": 301.9
+}, {
+  "label": "Anomaly",
+  "rate": 201.1
+}];
+
+// Add and configure Series
+var pieSeries = piechart.series.push(new am4charts.PieSeries());
+pieSeries.dataFields.value = "rate";
+pieSeries.dataFields.category = "label";
+pieSeries.slices.template.stroke = am4core.color("#fff");
+pieSeries.slices.template.strokeWidth = 1;
+pieSeries.slices.template.strokeOpacity = 1;
+
+// This creates initial animation
+pieSeries.hiddenState.properties.opacity = 1;
+pieSeries.hiddenState.properties.endAngle = -90;
+pieSeries.hiddenState.properties.startAngle = -90;
+
+
+
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+var chart = am4core.create("chartdiv1", am4charts.XYChart);
+chart.scrollbarX = new am4core.Scrollbar();
+
+// Add data
+chart.data = [{
+  "point": "0.1",
+  "count": 3025
+}, {
+  "point": "0.2",
+  "count": 1882
+}, {
+  "point": "0.3",
+  "count": 1809
+}, {
+  "point": "0.4",
+  "count": 1322
+}, {
+  "point": "0.5",
+  "count": 1122
+}, {
+  "point": "0.6",
+  "count": 1114
+}, {
+  "point": "0.7",
+  "count": 984
+}, {
+  "point": "0.8",
+  "count": 711
+}, {
+  "point": "0.9",
+  "count": 665
+}, {
+  "point": "1",
+  "count": 580
+}];
+
+// Create axes
+var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+categoryAxis.dataFields.category = "point";
+categoryAxis.renderer.grid.template.location = 0;
+categoryAxis.renderer.minGridDistance = 30;
+categoryAxis.renderer.labels.template.horizontalCenter = "right";
+categoryAxis.renderer.labels.template.verticalCenter = "middle";
+categoryAxis.renderer.labels.template.rotation = 270;
+categoryAxis.tooltip.disabled = true;
+categoryAxis.renderer.minHeight = 110;
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.renderer.minWidth = 50;
+
+// Create series
+var series = chart.series.push(new am4charts.ColumnSeries());
+series.sequencedInterpolation = true;
+series.dataFields.valueY = "count";
+series.dataFields.categoryX = "point";
+series.tooltipText = "[{categoryX}: bold]{valueY}[/]";
+series.columns.template.strokeWidth = 0;
+
+series.tooltip.pointerOrientation = "vertical";
+
+series.columns.template.column.cornerRadiusTopLeft = 10;
+series.columns.template.column.cornerRadiusTopRight = 10;
+series.columns.template.column.fillOpacity = 0.8;
+
+// on hover, make corner radiuses bigger
+var hoverState = series.columns.template.column.states.create("hover");
+hoverState.properties.cornerRadiusTopLeft = 0;
+hoverState.properties.cornerRadiusTopRight = 0;
+hoverState.properties.fillOpacity = 1;
+
+series.columns.template.adapter.add("fill", function(fill, target) {
+  return chart.colors.getIndex(target.dataItem.index);
+});
+
+// Cursor
+chart.cursor = new am4charts.XYCursor();
