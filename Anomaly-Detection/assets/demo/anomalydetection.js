@@ -150,6 +150,36 @@ chart.data = [{
 }, {
   "point": "1",
   "count": 580
+}, {
+  "point": "1.1",
+  "count": 800
+}, {
+  "point": "1.2",
+  "count": 760
+}, {
+  "point": "1.3",
+  "count": 120
+}, {
+  "point": "1.4",
+  "count": 535
+}, {
+  "point": "1.5",
+  "count": 796
+}, {
+  "point": "1.6",
+  "count": 124
+}, {
+  "point": "1.7",
+  "count": 145
+}, {
+  "point": "1.8",
+  "count": 852
+}, {
+  "point": "1.9",
+  "count": 453
+}, {
+  "point": "2",
+  "count": 762
 }];
 
 // Create axes
@@ -160,7 +190,7 @@ categoryAxis.renderer.minGridDistance = 30;
 categoryAxis.renderer.labels.template.horizontalCenter = "right";
 categoryAxis.renderer.labels.template.verticalCenter = "middle";
 categoryAxis.renderer.labels.template.rotation = 270;
-categoryAxis.tooltip.disabled = true;
+// categoryAxis.tooltip.disabled = true;
 categoryAxis.renderer.minHeight = 110;
 
 var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
